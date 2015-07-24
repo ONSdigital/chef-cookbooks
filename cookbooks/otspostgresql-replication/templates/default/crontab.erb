@@ -1,0 +1,3 @@
+# Backup the PostgreSQL cluster with a full hot backup (pg-basebackup)
+# 5am everyday
+00 05 * * * <%= node[:postgresql][:dba_bin] %>/postgres_cluster_hot_backup.sh <%= node[:postgresql][:port] %> > /dev/null 2>&1

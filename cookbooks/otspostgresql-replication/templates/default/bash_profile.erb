@@ -1,0 +1,21 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# PostgreSQL specific environment
+export POSTGRES_HOME=<%= node[:postgresql][:bin_dir] %>
+export PGDATA=<%= node[:postgresql][:data_dir] %>
+export PGPORT=<%= node[:postgresql][:port] %>
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin:$POSTGRES_HOME/bin
+
+export PATH
+
+
+# unalias ls - the colours do my head in. Sorry.
+unalias ls
