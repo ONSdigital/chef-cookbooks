@@ -15,6 +15,7 @@ default['basefuse']['maven_snapshot_dir']       = 'chef/m2'
 default['basefuse']['fuse_user']                = 'fuse'
 default['basefuse']['fuse_user_home']           = '/home/fuse'
 default['basefuse']['fuse_user_process_limit']  = '2048'
+default['basefuse']['custom_packages']          = ['sun.misc']
 
 default['basefuse']['fabric']['command_script'] = 'chef/scripts/jbossfuse/bare-fabric'
 default['basefuse']['fabric']['openwire_port']  = '53445'
