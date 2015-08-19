@@ -16,11 +16,13 @@ link "#{SYMBOLIC_LINK}" do
   owner 'root'
   group 'root'
   to    "#{KARAF_SERVICE}"
+  notifies :enable, 'service[karaf]', :immediately
+  notifies :start,  'service[karaf]', :immediately
   action :create
   not_if "test -f #{SYMBOLIC_LINK}"
 end
 
 service 'karaf' do
   supports reload: false, restart: true, status: true
-  action [:enable, :start]
+  action :nothing
 end
