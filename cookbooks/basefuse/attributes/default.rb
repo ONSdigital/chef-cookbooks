@@ -19,4 +19,3 @@ default['basefuse']['custom_packages']          = ['sun.misc']
 
 default['basefuse']['fabric']['command_script'] = 'chef/scripts/jbossfuse/bare-fabric'
 default['basefuse']['fabric']['openwire_port']  = '53445'
-default['basefuse']['fabric']['installed']      = 'false'

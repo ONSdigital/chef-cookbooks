@@ -15,7 +15,6 @@ FUSE_BIN_DIR     = "#{FUSE_INSTALL_DIR}/bin"
 JAVA_HOME        = '/usr/lib/jvm/jre'
 
 COMMAND_SCRIPT   = node['basefuse']['fabric']['command_script']
-FABRIC_INSTALLED = node['basefuse']['fabric']['installed']
 SCRIPT_NAME      = File.basename(COMMAND_SCRIPT)
 
 remote_file "GET http://#{FILE_STORE}:#{FILE_STORE_PORT}/#{COMMAND_SCRIPT}" do
@@ -31,7 +30,5 @@ execute command do
   command command
   environment 'JAVA_HOME' => JAVA_HOME
   action :run
-  only_if { FABRIC_INSTALLED == 'false' }
+  not_if "test -d #{FUSE_INSTALL_DIR}/instances/myLocalBroker1"
 end
-
-node.set['basefuse']['fabric']['installed'] = 'true'
