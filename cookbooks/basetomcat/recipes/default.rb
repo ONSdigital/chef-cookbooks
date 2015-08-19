@@ -6,7 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'baseos'
 include_recipe 'basejava'
 
 include_recipe 'basetomcat::install_packages'

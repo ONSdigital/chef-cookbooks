@@ -6,7 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'baseos'
 include_recipe 'basejava'
 
 include_recipe 'basefuse::create_fuse_user'
