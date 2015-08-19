@@ -6,4 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe 'baseos'
+
 include_recipe 'basejava::install_packages'
