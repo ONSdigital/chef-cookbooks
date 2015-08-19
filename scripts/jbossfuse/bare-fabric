@@ -1,0 +1,28 @@
+# Create the Fabric
+fabric:create --wait-for-provisioning
+
+# Add a ZooKeeper admin user to the "karaf" realm
+jaas:manage --index 3; jaas:useradd user password; jaas:roleadd user admin; jaas:update
+
+# Set up the local Maven repository in the default profile
+fabric:profile-edit --pid io.fabric8.maven/localRepository=file:///opt/fuse/m2/repository default
+
+# Create a broker profile on the Fabric
+fabric:mq-create mybroker
+
+# Assign the broker profile to two child containers under the root container
+container-create-child --profile mq-broker-default.mybroker root myLocalBroker 2
+
+# Change the group name of the broker from the default
+fabric:profile-edit --pid org.fusesource.mq.fabric.server-mybroker/group=mybroker mq-broker-default.mybroker
+
+# Share the persistent storage between the child containers to avoid message loss
+fabric:profile-edit --pid org.fusesource.mq.fabric.server-mybroker/data=/opt/fuse/jboss-fuse-6.1.0.redhat-379/mq/data/mybroker mq-broker-default.mybroker
+
+# Set the broker to listen on a specific port so the Process zone Fabric can connect to this broker to pull data through
+fabric:profile-edit --pid org.fusesource.mq.fabric.server-mybroker/openwire-port=53445 mq-broker-default.mybroker
+
+# Configure the default Fabric profile
+fabric:profile-edit --repositories mvn:org.apache.karaf.assemblies.features/standard/${version:karaf}/xml/features default
+fabric:profile-edit --repositories mvn:io.fabric8/fabric8-karaf/${version:fabric}/xml/features default
+
