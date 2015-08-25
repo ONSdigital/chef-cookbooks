@@ -10,8 +10,7 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|mongodb
-  install\_method|String|Where to get the MongoDB package from. Note that `mongodb-org` must be specified for CentOS|
+|mongodb::install\_method|String|Where to get the MongoDB package from. Note that `mongodb-org` must be specified for CentOS|
 
 Recipes
 -------

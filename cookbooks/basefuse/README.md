@@ -10,32 +10,18 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|basefuse
-  fuse\_archive|String|The file name of the Fuse software distribution|
-|basefuse
-  fuse\_archive\_dir|String|The name of the directory containing the Fuse software distribution on the File Store Server|
-|basefuse
-  fuse\_install\_root|String|The root directory of the Fuse installation|
-|basefuse
-  fuse\_install\_dir|String|The directory where Fuse should be installed|
-|basefuse
-  maven\_repository\_dir|String|The local Maven repository directory|
-|basefuse
-  maven\_snapshot\_dir|String|The Maven directory on the File Store Server containing a snapshot of the Maven repository|
-|basefuse
-  fuse\_user|String|The name of the operating system account Fuse will run under|
-|basefuse
-  fuse\_user\_home|String|The path to the Fuse user's home directory|
-|basefuse
-  fuse\_user\_process\_limit|String|The maximum number of processes the Fuse user can run|
-|basefuse
-  custom\_packages|Array|Any packages that should be added to the Fuse runtime classpath|
-|basefuse
-  fabric
-    command\_script|String|The script on the File Store Server used to build the bare Fuse Fabric|
-|basefuse
-  fabric
-    openwire\_port|Integer|The OpenWire port used to communicate with this Fuse Fabric from the Process zone Fuse Fabric|
+|basefuse::fuse\_archive|String|The file name of the Fuse software distribution|
+|basefuse::fuse\_archive\_dir|String|The name of the directory containing the Fuse software distribution on the File Store Server|
+|basefuse::fuse\_install\_root|String|The root directory of the Fuse installation|
+|basefuse::fuse\_install\_dir|String|The directory where Fuse should be installed|
+|basefuse::maven\_repository\_dir|String|The local Maven repository directory|
+|basefuse::maven\_snapshot\_dir|String|The Maven directory on the File Store Server containing a snapshot of the Maven repository|
+|basefuse::fuse\_user|String|The name of the operating system account Fuse will run under|
+|basefuse::fuse\_user\_home|String|The path to the Fuse user's home directory|
+|basefuse::fuse\_user\_process\_limit|String|The maximum number of processes the Fuse user can run|
+|basefuse::custom\_packages|Array|Any packages that should be added to the Fuse runtime classpath|
+|basefuse::fabric::command\_script|String|The script on the File Store Server used to build the bare Fuse Fabric|
+|basefuse::fabric::openwire\_port|Integer|The OpenWire port used to communicate with this Fuse Fabric from the Process zone Fuse Fabric|
 
 Recipes
 -------

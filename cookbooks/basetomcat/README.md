@@ -10,10 +10,8 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|basetomcat
-  connector\_port|String|The port the Tomcat server will listen on|
-|basetomcat
-  packages|Hash|Operating system packages to be installed|
+|basetomcat::connector\_port|String|The port the Tomcat server will listen on|
+|basetomcat::packages|Hash|Operating system packages to be installed|
 
 Recipes
 -------

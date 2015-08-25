@@ -8,20 +8,18 @@ Attributes
 
 This cookbook declares the attributes listed in the table below in `attributes/default.rb`:
 
-| Key            | Type   | Description                                  |
-|----------------|--------|----------------------------------------------|
-| baseapache
-   documentroot  | String | The location of the web server document root |
-| baseapache
-   packages      | Hash   | Operating system packages to be installed    |
+|Key|Type|Description|
+|---|----|-----------|
+| baseapache::documentroot  | String | The location of the web server document root |
+| baseapache::packages      | Hash   | Operating system packages to be installed    |
 
 Recipes
 -------
 
 This cookbook includes the recipes listed in the table below. Recipes are executed in the order they are listed.
 
-| Recipe                                        | Description                                                                        |
-|-----------------------------------------------|------------------------------------------------------------------------------------|
+|Recipe|Description|
+|------|-----------|
 | default                                       | Default recipe                                                                     |
 | baseos                                        | Runs the `baseos` cookbook default recipe                                          |
 | baseapache::install\_packages                 | Installs the operating system packages specified by the `packages` attribute above |

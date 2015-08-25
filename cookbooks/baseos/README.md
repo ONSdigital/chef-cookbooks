@@ -10,16 +10,10 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|baseos
-  credentials\_data\_bag\_node|String|The name of the Chef [encrypted data bag](https://docs.chef.io/data_bags.html) containing various credentials used by other cookbooks|
-|baseos
-  filestore
-    host|String|The IP address of the File Store Server|
-|baseos
-  filestore
-    port|String|The HTTP port the File Store Server listens on|
-|baseos
-  packages|Hash|Operating system packages to be installed|
+|baseos::credentials\_data\_bag\_node|String|The name of the Chef [encrypted data bag](https://docs.chef.io/data_bags.html) containing various credentials used by other cookbooks|
+|baseos::filestore::host|String|The IP address of the File Store Server|
+|baseos::filestore::port|String|The HTTP port the File Store Server listens on|
+|baseos::packages|Hash|Operating system packages to be installed|
 
 Recipes
 -------

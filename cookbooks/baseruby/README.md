@@ -10,14 +10,10 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|baseruby
-  ruby\_version|String|The version of Ruby to install|
-|baseruby
-  ruby\_install\_dir|String|The root of the Ruby installation directory|
-|baseruby
-  ruby\_gems\_updated|String|Attribute guard that indicates whether the RubyGems package manager has been updated or not|
-|baseruby
-  packages|Hash|Operating system packages to be installed|
+|baseruby::ruby\_version|String|The version of Ruby to install|
+|baseruby::ruby\_install\_dir|String|The root of the Ruby installation directory|
+|baseruby::ruby\_gems\_updated|String|Attribute guard that indicates whether the RubyGems package manager has been updated or not|
+|baseruby::packages|Hash|Operating system packages to be installed|
 
 Recipes
 -------

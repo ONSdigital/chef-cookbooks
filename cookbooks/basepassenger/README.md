@@ -10,10 +10,8 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|basepassenger
-  passenger\_version|String|The version of Phusion Passenger to install|
-|basepassenger
-  packages|Hash|Operating system packages to be installed|
+|basepassenger::passenger\_version|String|The version of Phusion Passenger to install|
+|basepassenger::packages|Hash|Operating system packages to be installed|
 
 Recipes
 -------

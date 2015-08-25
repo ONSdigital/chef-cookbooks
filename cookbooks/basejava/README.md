@@ -10,8 +10,7 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 
 |Key|Type|Description|
 |---|----|-----------|
-|basejava
-  packages|Hash|Operating system packages to be installed|
+|basejava::packages|Hash|Operating system packages to be installed|
 
 Recipes
 -------
