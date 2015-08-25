@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the basepassenger cook
 
 0.1.0
 -----
-- [your_name] - Initial release of basepassenger
+- [John Topley] - Initial release of basepassenger
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

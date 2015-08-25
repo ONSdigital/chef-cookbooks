@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the basejava cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of basejava
+- [John Topley] - Initial release of basejava
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

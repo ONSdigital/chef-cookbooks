@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the baseapache cookboo
 
 0.1.0
 -----
-- [your_name] - Initial release of baseapache
+- [John Topley] - Initial release of baseapache
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
