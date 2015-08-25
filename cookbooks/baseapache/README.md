@@ -1,7 +1,7 @@
 Introduction
 ------------
 
-This article documents the [Chef] **baseapache** cookbook which is a general-purpose cookbook that installs the [Apache 2] web server.
+The [Chef] **baseapache** cookbook is a general-purpose cookbook that installs the [Apache 2] web server.
 
 Attributes
 ----------
