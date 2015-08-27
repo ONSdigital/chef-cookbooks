@@ -7,6 +7,9 @@ jaas:manage --index 3; jaas:useradd user password; jaas:roleadd user admin; jaas
 # Set up the local Maven repository in the default profile
 fabric:profile-edit --pid io.fabric8.maven/localRepository=file:///opt/fuse/m2/repository default
 
+# Set up Artifactory as the remote Maven repository in the default profile
+fabric:profile-edit --pid io.fabric8.agent/org.ops4j.pax.url.mvn.repositories=http://filestore:8081/artifactory/libs-release,http://filestore:8081/artifactory/libs-snapshot@snapshots default
+
 # Create a broker profile on the Fabric
 fabric:mq-create mybroker
 
@@ -25,4 +28,3 @@ fabric:profile-edit --pid org.fusesource.mq.fabric.server-mybroker/openwire-port
 # Configure the default Fabric profile
 fabric:profile-edit --repositories mvn:org.apache.karaf.assemblies.features/standard/${version:karaf}/xml/features default
 fabric:profile-edit --repositories mvn:io.fabric8/fabric8-karaf/${version:fabric}/xml/features default
-
