@@ -15,7 +15,6 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 |basefuse::fuse\_install\_root|String|The root directory of the Fuse installation|
 |basefuse::fuse\_install\_dir|String|The directory where Fuse should be installed|
 |basefuse::maven\_repository\_dir|String|The local Maven repository directory|
-|basefuse::maven\_snapshot\_dir|String|The Maven directory on the File Store Server containing a snapshot of the Maven repository|
 |basefuse::fuse\_user|String|The name of the operating system account Fuse will run under|
 |basefuse::fuse\_user\_home|String|The path to the Fuse user's home directory|
 |basefuse::fuse\_user\_process\_limit|String|The maximum number of processes the Fuse user can run|
@@ -41,7 +40,6 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |basefuse::create\_fuse\_service\_wrapper|Creates the wrapper file used to run the Fuse service|
 |basefuse::install\_fuse\_service|Enables and starts the Fuse service|
 |basefuse::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
-|basefuse::copy\_maven\_repository|Downloads a compressed copy of the Maven repository to use as the local repository|
 |basefuse::create\_fabric|Creates the bare Fuse Fabric|
 
 Templates
