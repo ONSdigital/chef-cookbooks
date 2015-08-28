@@ -16,5 +16,5 @@ bash "/usr/local/bin/ruby-build #{VERSION} #{INSTALL_DIR}" do
     /usr/local/bin/ruby-build #{VERSION} #{INSTALL_DIR}
   EOC
   action :run
-  not_if "test -f #{INSTALL_DIR}/bin/ruby"
+  not_if { ::File.exist?(::File.join(INSTALL_DIR, 'bin', 'ruby')) }
 end

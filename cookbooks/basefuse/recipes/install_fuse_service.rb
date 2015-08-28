@@ -19,7 +19,7 @@ link "#{SYMBOLIC_LINK}" do
   notifies :enable, 'service[karaf]', :immediately
   notifies :start,  'service[karaf]', :immediately
   action :create
-  not_if "test -f #{SYMBOLIC_LINK}"
+  not_if { ::File.exist?(SYMBOLIC_LINK) }
 end
 
 service 'karaf' do

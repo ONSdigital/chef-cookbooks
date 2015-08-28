@@ -15,5 +15,5 @@ execute command do
   group 'root'
   command command
   action :run
-  not_if "test -f /usr/lib/ruby/gems/#{RUBY_VERSION}/gems/passenger-#{PASSENGER_VERSION}/buildout/apache2/mod_passenger.so"
+  not_if { ::File.exist?(::File.join('/usr/lib/ruby/gems', RUBY_VERSION, "gems/passenger-#{PASSENGER_VERSION}", 'buildout/apache2/mod_passenger.so')) }
 end

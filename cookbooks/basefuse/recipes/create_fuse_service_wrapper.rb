@@ -18,7 +18,7 @@ execute command do
   user  FUSE_USER
   group FUSE_USER
   action :run
-  not_if "test -f #{KARAF_SERVICE}"
+  not_if { ::File.exist?(KARAF_SERVICE) }
 end
 
 command = "#{FUSE_BIN_DIR}/client 'features:install wrapper; wrapper:install -n karaf'"
@@ -30,7 +30,7 @@ execute command do
   retry_delay 300 # The karaf takes a while to come up
   command command
   action :run
-  not_if "test -f #{KARAF_SERVICE}"
+  not_if { ::File.exist?(KARAF_SERVICE) }
 end
 
 command = "sed -i 's/#RUN_AS_USER=/RUN_AS_USER=#{FUSE_USER}/g' #{KARAF_SERVICE}"

@@ -21,5 +21,5 @@ bash "#{REPO_PATH}/install.sh" do
     ./install.sh
   EOC
   action :run
-  not_if 'test -f /usr/local/bin/ruby-build'
+  not_if { ::File.exist?('/usr/local/bin/ruby-build') }
 end

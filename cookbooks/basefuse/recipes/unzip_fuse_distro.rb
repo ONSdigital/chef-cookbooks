@@ -29,7 +29,6 @@ remote_file "GET http://#{FILE_STORE}:#{FILE_STORE_PORT}/#{FUSE_ARCHIVE_DIR}/#{F
   source "http://#{FILE_STORE}:#{FILE_STORE_PORT}/#{FUSE_ARCHIVE_DIR}/#{FUSE_ARCHIVE}"
   path "/tmp/#{FUSE_ARCHIVE}"
   action :create
-  not_if "test -f #{KARAF}"
 end
 
 command = <<-EOC
@@ -42,7 +41,7 @@ execute command do
   group   'root'
   command command
   action :run
-  not_if "test -f #{KARAF}"
+  not_if { ::File.exist?(KARAF) }
 end
 
 command = "unzip /tmp/#{FUSE_ARCHIVE} -d #{FUSE_INSTALL_ROOT}"
@@ -51,9 +50,5 @@ execute command do
   group   FUSE_USER
   command command
   action :run
-  not_if "test -f #{KARAF}"
-end
-
-file "/tmp/#{FUSE_ARCHIVE}" do
-  action :delete
+  not_if { ::File.exist?(KARAF) }
 end
