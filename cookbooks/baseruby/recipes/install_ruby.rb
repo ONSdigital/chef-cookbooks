@@ -9,12 +9,11 @@
 VERSION     = node['baseruby']['ruby_version']
 INSTALL_DIR = node['baseruby']['ruby_install_dir']
 
-bash "/usr/local/bin/ruby-build #{VERSION} #{INSTALL_DIR}" do
+command = "/usr/local/bin/ruby-build #{VERSION} #{INSTALL_DIR}"
+execute command do
   user  'root'
   group 'root'
-  code <<-EOC
-    /usr/local/bin/ruby-build #{VERSION} #{INSTALL_DIR}
-  EOC
+  command command
   action :run
-  not_if { ::File.exist?(::File.join(INSTALL_DIR, 'bin', 'ruby')) }
+  not_if { `ruby --version`.start_with?("ruby #{VERSION}") }
 end
