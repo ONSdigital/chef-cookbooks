@@ -14,7 +14,7 @@ fabric:profile-edit --pid io.fabric8.agent/org.ops4j.pax.url.mvn.repositories=ht
 fabric:mq-create mybroker
 
 # Assign the broker profile to two child containers under the root container
-container-create-child --profile mq-broker-default.mybroker root myLocalBroker 2
+container-create-child --profile mq-broker-default.mybroker root localBroker 2
 
 # Change the group name of the broker from the default
 fabric:profile-edit --pid org.fusesource.mq.fabric.server-mybroker/group=mybroker mq-broker-default.mybroker

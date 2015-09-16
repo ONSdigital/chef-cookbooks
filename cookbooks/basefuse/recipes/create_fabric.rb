@@ -30,5 +30,5 @@ execute command do
   command command
   environment 'JAVA_HOME' => JAVA_HOME
   action :run
-  not_if { ::File.directory?(::File.join(FUSE_INSTALL_DIR, 'instances/myLocalBroker1')) }
+  not_if { ::File.directory?(::File.join(FUSE_INSTALL_DIR, 'instances/localBroker1')) }
 end
