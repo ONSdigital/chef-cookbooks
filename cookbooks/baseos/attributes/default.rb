@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 default['baseos']['credentials_data_bag_name'] = 'credentials'
+
+default['baseos']['filestore']['host']         = 'xxx.xxx.xxx.xxx'
 default['baseos']['filestore']['port']         = '8001'
 
 default['baseos']['packages'] = {
