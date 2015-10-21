@@ -18,11 +18,12 @@ PROFILE          = node['platform_family'] == 'debian' ? "#{FUSE_USER_HOME}/.pro
 
 fuse_user_password = data_bag_item(DATA_BAG_NAME, 'os')['fuse_user_password']
 
+shell = node.chef_environment == 'development' ? '/bin/bash' : '/sbin/nologin'
 user FUSE_USER do
   comment  'User account for running JBoss Fuse ESB'
   home     FUSE_USER_HOME
   password fuse_user_password
-  shell    '/sbin/nologin'
+  shell    shell
   action :create
 end
 
