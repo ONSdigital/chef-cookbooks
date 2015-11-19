@@ -39,6 +39,7 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |basefuse::create\_fabric\_admin\_user|Creates the Fuse `users.properties` file that defines the users who can log in to the Fuse Fabric|
 |basefuse::create\_fuse\_service\_wrapper|Creates the wrapper file used to run the Fuse service|
 |basefuse::install\_fuse\_service|Enables and starts the Fuse service|
+|basefuse::create\_fuse\_control\_scripts|Creates the start-all-containers.sh and stop-all-containers.sh shell scripts for starting and stopping all the installed Fuse containers|
 |basefuse::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
 |basefuse::create\_fabric|Creates the bare Fuse Fabric|
 
@@ -51,5 +52,7 @@ This cookbook includes the templates listed in the table below:
 |--------|-----------|-----------|
 |default/config.properties.erb|/opt/fuse/jboss-fuse-6.1.0.redhat-379/etc/config.properties|Custom Karaf properties|
 |default/settings.xml.erb|/opt/fuse/m2/settings.xml|Maven local repository settings|
+|default/start-all-containers.sh.erb|/opt/fuse/scripts/start-all-containers.sh|Shell script to start all the installed Fuse containers|
+|default/stop-all-containers.sh.erb|/opt/fuse/scripts/stop-all-containers.sh|Shell script to stop all the installed Fuse containers|
 |default/users.properties.erb|/opt/fuse/jboss-fuse-6.1.0.redhat-379/etc/users.properties|Fuse Fabric users|
 |rhel/bash\_profile.erb|/home/fuse/.bash\_profile|Bash profile for the Fuse user operating system account|
