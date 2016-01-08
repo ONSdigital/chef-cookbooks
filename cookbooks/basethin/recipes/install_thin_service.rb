@@ -6,11 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-RUBY_INSTALL_DIR = node['baseruby']['ruby_install_dir']
-
-THIN_USER        = node['basethin']['thin_user']
-THIN_CONFIG_DIR  = node['basethin']['config_dir']
-THIN_INIT_FILE   = '/etc/init.d/thin'
+THIN_USER         = node['basethin']['thin_user']
+THIN_CONFIG_DIR   = node['basethin']['config_dir']
+THIN_SERVICE_FILE = '/usr/lib/systemd/system/thin.service'
 
 directory THIN_CONFIG_DIR do
   owner THIN_USER
@@ -19,22 +17,22 @@ directory THIN_CONFIG_DIR do
   action :create
 end
 
-template THIN_INIT_FILE do
-  source 'thin_init.erb'
+template THIN_SERVICE_FILE do
+  source 'thin.service.erb'
   owner  'root'
   group  'root'
-  mode   '0755'
+  mode   '0644'
   variables(
-    ruby_install_dir: RUBY_INSTALL_DIR,
-    thin_user:        THIN_USER
+    thin_config_dir: THIN_CONFIG_DIR,
+    thin_user:       THIN_USER
   )
   notifies :enable, 'service[thin]'
   notifies :start,  'service[thin]'
   action :create
-  not_if "grep 'Chef' #{THIN_INIT_FILE}"
+  not_if "grep 'Chef' #{THIN_SERVICE_FILE}"
 end
 
 service 'thin' do
-  supports reload: false, restart: true, status: false
+  supports reload: false, restart: true, status: true
   action :nothing
 end
