@@ -17,6 +17,6 @@ user THIN_USER do
   comment  'User account for running Thin web server'
   home     THIN_USER_HOME
   password thin_user_password
-  shell    '/bin/bash'
+  shell    '/sbin/nologin'
   action :create
 end
