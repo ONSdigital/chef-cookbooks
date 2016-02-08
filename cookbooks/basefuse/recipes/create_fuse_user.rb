@@ -14,7 +14,7 @@ FUSE_USER_HOME   = node['basefuse']['fuse_user_home']
 PROCESS_LIMIT    = node['basefuse']['fuse_user_process_limit']
 
 FUSE_BIN_DIR     = "#{FUSE_INSTALL_DIR}/bin"
-PROFILE          = node['platform_family'] == 'debian' ? "#{FUSE_USER_HOME}/.profile" : "#{FUSE_USER_HOME}/.bash_profile"
+PROFILE          = "#{FUSE_USER_HOME}/.bash_profile"
 
 fuse_user_password = data_bag_item(DATA_BAG_NAME, 'os')['fuse_user_password']
 
