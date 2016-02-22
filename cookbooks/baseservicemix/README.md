@@ -33,7 +33,8 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |baseservicemix::create\_servicemix\_group|Creates an operating system group and makes the ServiceMix user created in the `create_servicemix_user` recipe a member of it|
 |baseservicemix::unzip\_servicemix\_distro|Downloads the ServiceMix distribution from the File Store Server and unzips it|
 |baseservicemix::update\_servicemix\_logger|Updates the ServiceMix logging settings so each bundle logs to a separate file|
-|baseservicemix::update\_service\_mix\_environment|Updates the ServiceMix environment settings file with the correct `JAVA_HOME` environment variable|
+|baseservicemix::update\_servicemix\_environment|Updates the ServiceMix environment settings file with the correct `JAVA_HOME` environment variable|
+|baseservicemix::update\_servicemix\_activemq\_config|Updates the ServiceMix ActiveMQ configuration file with the OpenWire port|
 |baseservicemix::create\_maven\_repository|Creates the bare local Maven repository used by ServiceMix|
 |baseservicemix::create\_servicemix\_service\_wrapper|Creates the wrapper file used to run the ServiceMix service|
 |baseservicemix::install\_servicemix\_service|Enables and starts the ServiceMix service|
