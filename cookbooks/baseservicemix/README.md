@@ -49,6 +49,7 @@ This cookbook includes the templates listed in the table below:
 
 |Template|Output File|Description|
 |--------|-----------|-----------|
+|default/activemq.xml.erb|/opt/servicemix/apache-servicemix-6.1.0/etc/activemq.xml|ActiveMQ settings|
 |default/setenv.erb|/opt/servicemix/apache-servicemix-6.1.0/bin/setenv|ServiceMix environment settings|
 |default/settings.xml.erb|/opt/servicemix/m2/settings.xml|Maven local repository settings|
 |rhel/bash\_profile.erb|/home/servicemix/.bash\_profile|Bash profile for the ServiceMix user operating system account|
