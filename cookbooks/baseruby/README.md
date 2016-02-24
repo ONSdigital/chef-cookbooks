@@ -30,6 +30,7 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |baseruby::install\_ruby|Uses the `ruby-build` command to install the specified version of Ruby|
 |baseruby::update\_ruby\_gems\_system|Updates the RubyGems package manager to the latest version|
 |baseruby::install\_bundler|Installs the [`Bundler`](http://bundler.io/) RubyGem|
+|baseruby::install\_rubocop|Installs the [`RuboCop`](https://github.com/bbatsov/rubocop) RubyGem for development environments only|
 
 Templates
 ---------
