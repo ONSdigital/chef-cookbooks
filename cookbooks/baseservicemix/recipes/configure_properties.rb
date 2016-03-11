@@ -11,11 +11,11 @@ FILE_STORE_PORT        = node['baseos']['filestore']['port']
 
 SERVICEMIX_INSTALL_DIR = node['baseservicemix']['servicemix_install_dir']
 SERVICEMIX_USER        = node['baseservicemix']['servicemix_user']
+COMMAND_SCRIPT         = node['baseservicemix']['command_script']
+PROPERTIES_CONFIGURED  = node['baseservicemix']['properties_configured']
 
 SERVICEMIX_BIN_DIR     = "#{SERVICEMIX_INSTALL_DIR}/bin"
 JAVA_HOME              = '/usr/lib/jvm/jre'
-
-COMMAND_SCRIPT         = node['baseservicemix']['command_script']
 SCRIPT_NAME            = File.basename(COMMAND_SCRIPT)
 
 remote_file "GET http://#{FILE_STORE}:#{FILE_STORE_PORT}/#{COMMAND_SCRIPT}" do
@@ -31,4 +31,7 @@ execute command do
   command command
   environment 'JAVA_HOME' => JAVA_HOME
   action :run
+  only_if { PROPERTIES_CONFIGURED == 'false' }
 end
+
+node.set['baseservicemix']['properties_configured'] = 'true'
