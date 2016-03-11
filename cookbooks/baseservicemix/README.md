@@ -18,7 +18,9 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 |baseservicemix::servicemix\_user|String|The name of the operating system account ServiceMix will run under|
 |baseservicemix::servicemix\_user\_home|String|The path to the ServiceMix user's home directory|
 |baseservicemix::command\_script|String|The script on the File Store Server used to configure global ServiceMix properties|
-|baseservicemix::openwire\_port|Integer|The OpenWire port used to communicate with ServiceMix's ActiveMQ broker from the Process zone's ActiveMQ broker|
+|baseservicemix::openwire\_port|String|The OpenWire port used to communicate with ServiceMix's ActiveMQ broker from the Process zone's ActiveMQ broker|
+|baseservicemix::properties\_configured|String|Whether the `configure_properties` recipe has configured various ServiceMix properties|
+|baseservicemix::webconsoles\_installed|String|Whether the `install_web_console_features` recipe has installed the ActiveMQ and Karaf web consoles|
 
 Recipes
 -------
