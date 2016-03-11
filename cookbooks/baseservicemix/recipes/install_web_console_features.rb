@@ -8,6 +8,7 @@
 #
 SERVICEMIX_INSTALL_DIR = node['baseservicemix']['servicemix_install_dir']
 SERVICEMIX_USER        = node['baseservicemix']['servicemix_user']
+WEBCONSOLES_INSTALLED  = node['baseservicemix']['webconsoles_installed']
 
 SERVICEMIX_BIN_DIR     = "#{SERVICEMIX_INSTALL_DIR}/bin"
 JAVA_HOME              = '/usr/lib/jvm/jre'
@@ -19,4 +20,7 @@ execute command do
   environment 'JAVA_HOME' => JAVA_HOME
   command command
   action :run
+  only_if { WEBCONSOLES_INSTALLED == 'false' }
 end
+
+node.set['baseservicemix']['webconsoles_installed'] = 'true'
