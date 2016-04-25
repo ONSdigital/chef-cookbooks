@@ -43,7 +43,6 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |baseservicemix::install\_servicemix\_service|Enables and starts the ServiceMix service|
 |baseservicemix::configure\_properties|Configures global ServiceMix properties such as the Maven repository location and the ActiveMQ broker credentials|
 |baseservicemix::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
-|baseservicemix::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
 |baseservicemix::install\_hawtio|Installs the Hawtio web console|
 
 Templates
