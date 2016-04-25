@@ -16,4 +16,5 @@ default['baseservicemix']['servicemix_user_home']    = '/home/servicemix'
 default['baseservicemix']['command_script']          = 'chef/scripts/apacheservicemix/base-properties'
 default['baseservicemix']['openwire_port']           = '53445'
 default['baseservicemix']['properties_configured']   = 'false'
-default['baseservicemix']['webconsoles_installed']   = 'false'
+default['baseservicemix']['hawtio_installed']        = 'false'
+default['baseservicemix']['hawtio_version']          = '1.4.64

@@ -20,7 +20,8 @@ This cookbook declares the attributes listed in the table below in `attributes/d
 |baseservicemix::command\_script|String|The script on the File Store Server used to configure global ServiceMix properties|
 |baseservicemix::openwire\_port|String|The OpenWire port used to communicate with ServiceMix's ActiveMQ broker from the Process zone's ActiveMQ broker|
 |baseservicemix::properties\_configured|String|Whether the `configure_properties` recipe has configured various ServiceMix properties|
-|baseservicemix::webconsoles\_installed|String|Whether the `install_web_console_features` recipe has installed the ActiveMQ and Karaf web consoles|
+|baseservicemix::hawtio\_installed|String|Whether the `install_hawtio` recipe has installed the Hawtio web console|
+|baseservicemix::hawtio\_version|String|The version of the Hawtio web console to install|
 
 Recipes
 -------
@@ -42,7 +43,8 @@ This cookbook includes the recipes listed in the table below. Recipes are execut
 |baseservicemix::install\_servicemix\_service|Enables and starts the ServiceMix service|
 |baseservicemix::configure\_properties|Configures global ServiceMix properties such as the Maven repository location and the ActiveMQ broker credentials|
 |baseservicemix::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
-|baseservicemix::install\_web\_console\_features|Installs the ActiveMQ and Karaf web consoles for development environments only|
+|baseservicemix::update\_selinux\_policy|Creates an SELinux policy exemption for the OpenWire port|
+|baseservicemix::install\_hawtio|Installs the Hawtio web console|
 
 Templates
 ---------

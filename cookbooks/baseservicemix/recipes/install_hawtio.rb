@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: baseservicemix
-# Recipe:: install_web_console_features
+# Recipe:: install_hawtio
 #
 # Copyright 2016, ONS
 #
@@ -8,19 +8,20 @@
 #
 SERVICEMIX_INSTALL_DIR = node['baseservicemix']['servicemix_install_dir']
 SERVICEMIX_USER        = node['baseservicemix']['servicemix_user']
-WEBCONSOLES_INSTALLED  = node['baseservicemix']['webconsoles_installed']
+HAWTIO_INSTALLED       = node['baseservicemix']['hawtio_installed']
+HAWTIO_VERSION         = node['baseservicemix']['hawtio_version']
 
 SERVICEMIX_BIN_DIR     = "#{SERVICEMIX_INSTALL_DIR}/bin"
 JAVA_HOME              = '/usr/lib/jvm/jre'
 
-command = "#{SERVICEMIX_BIN_DIR}/client 'feature:install webconsole; feature:install activemq-web-console'"
+command = "#{SERVICEMIX_BIN_DIR}/client 'feature:repo-add hawtio #{HAWTIO_VERSION}; feature:install hawtio-core'"
 execute command do
   user  SERVICEMIX_USER
   group SERVICEMIX_USER
   environment 'JAVA_HOME' => JAVA_HOME
   command command
   action :run
-  only_if { WEBCONSOLES_INSTALLED == 'false' }
+  only_if { HAWTIO_INSTALLED == 'false' }
 end
 
-node.set['baseservicemix']['webconsoles_installed'] = 'true'
+node.set['baseservicemix']['hawtio_installed'] = 'true'
