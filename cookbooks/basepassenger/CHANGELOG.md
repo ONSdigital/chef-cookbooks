@@ -3,6 +3,10 @@ basepassenger CHANGELOG
 
 This file is used to list changes made in each version of the basepassenger cookbook.
 
+1.0.0
+-----
+- [John Topley] - Updated Passenger version to 5.0.29
+
 0.1.0
 -----
 - [John Topley] - Initial release of basepassenger
