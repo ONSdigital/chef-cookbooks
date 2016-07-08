@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-default['baseruby']['ruby_version']      = '2.2.0'
+default['baseruby']['ruby_version']      = '2.3.1'
 default['baseruby']['ruby_install_dir']  = '/usr'
 default['baseruby']['ruby_gems_updated'] = 'false'
 default['baseruby']['packages'] = {

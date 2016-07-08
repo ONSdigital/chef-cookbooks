@@ -3,6 +3,10 @@ baseruby CHANGELOG
 
 This file is used to list changes made in each version of the baseruby cookbook.
 
+1.0.0
+-----
+- [John Topley] - Updated Ruby version to 2.3.1
+
 0.1.0
 -----
 - [John Topley] - Initial release of baseruby
