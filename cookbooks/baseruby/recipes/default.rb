@@ -14,4 +14,8 @@ include_recipe 'baseruby::install_ruby_build'
 include_recipe 'baseruby::install_ruby'
 include_recipe 'baseruby::update_ruby_gems_system'
 include_recipe 'baseruby::install_bundler'
-include_recipe 'baseruby::install_rubocop' if node.chef_environment == 'development'
+
+if node.chef_environment == 'development'
+  include_recipe 'baseruby::install_rubocop'
+  include_recipe 'baseruby::install_geminabox'
+end
