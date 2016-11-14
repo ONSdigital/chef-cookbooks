@@ -18,6 +18,7 @@ This repository contains the cookbooks detailed below:
 | basemongodb    | Installs the [MongoDB](http://www.mongodb.org/) document database server                       |
 | basepassenger  | Installs the [Phusion Passenger](https://www.phusionpassenger.com/) web server                 |
 | basepostgresql | Installs the [PostgreSQL](http://www.postgresql.org/) relational database server               |
+| baseredis      | Installs the [Redis](http://redis.io/) in-memory data structure store                          |
 | baseruby       | Installs the [Ruby](https://www.ruby-lang.org/en/) programming language                        |
 | baseservicemix | Installs the [Apache ServiceMix](http://servicemix.apache.org/) integration container          |
 | basetomcat     | Installs the [Apache Tomcat](http://tomcat.apache.org/) web server                             |
