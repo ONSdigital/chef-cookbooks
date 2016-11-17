@@ -16,6 +16,7 @@ This repository contains the cookbooks detailed below:
 | basefuse       | Installs the [JBoss Fuse](http://www.jboss.org/products/fuse/overview/) Enterprise Service Bus |
 | basejava       | Installs the [OpenJDK](http://openjdk.java.net/) Java Development Kit                          |
 | basemongodb    | Installs the [MongoDB](http://www.mongodb.org/) document database server                       |
+| basenginx      | Installs the [NGINX](http://nginx.org/) web server                                             |
 | basepassenger  | Installs the [Phusion Passenger](https://www.phusionpassenger.com/) web server                 |
 | basepostgresql | Installs the [PostgreSQL](http://www.postgresql.org/) relational database server               |
 | baseredis      | Installs the [Redis](http://redis.io/) in-memory data structure store                          |
