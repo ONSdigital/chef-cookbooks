@@ -9,17 +9,18 @@ have only been tested and used for real on [CentOS 7](https://www.centos.org/).
 ## Cookbooks
 This repository contains the cookbooks detailed below:
 
-| Cookbook       | Purpose                                                                                        |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| baseapache     | Installs the [Apache 2](http://httpd.apache.org/) web server                                   |
-| baseos         | Installs base operating system packages and configures the locale and timezone                 |
-| basefuse       | Installs the [JBoss Fuse](http://www.jboss.org/products/fuse/overview/) Enterprise Service Bus |
-| basejava       | Installs the [OpenJDK](http://openjdk.java.net/) Java Development Kit                          |
-| basemongodb    | Installs the [MongoDB](http://www.mongodb.org/) document database server                       |
-| basenginx      | Installs the [NGINX](http://nginx.org/) web server                                             |
-| basepassenger  | Installs the [Phusion Passenger](https://www.phusionpassenger.com/) web server                 |
-| basepostgresql | Installs the [PostgreSQL](http://www.postgresql.org/) relational database server               |
-| baseredis      | Installs the [Redis](http://redis.io/) in-memory data structure store                          |
-| baseruby       | Installs the [Ruby](https://www.ruby-lang.org/en/) programming language                        |
-| baseservicemix | Installs the [Apache ServiceMix](http://servicemix.apache.org/) integration container          |
-| basetomcat     | Installs the [Apache Tomcat](http://tomcat.apache.org/) web server                             |
+| Cookbook             | Purpose                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------- |
+| baseapache           | Installs the [Apache 2](http://httpd.apache.org/) web server                                   |
+| baseos               | Installs base operating system packages and configures the locale and timezone                 |
+| basefuse             | Installs the [JBoss Fuse](http://www.jboss.org/products/fuse/overview/) Enterprise Service Bus |
+| basehttploadbalancer | Installs and configures [NGINX](http://nginx.org/) as an HTTP load balancer                    |
+| basejava             | Installs the [OpenJDK](http://openjdk.java.net/) Java Development Kit                          |
+| basemongodb          | Installs the [MongoDB](http://www.mongodb.org/) document database server                       |
+| basenginx            | Installs the [NGINX](http://nginx.org/) web server                                             |
+| basepassenger        | Installs the [Phusion Passenger](https://www.phusionpassenger.com/) web server                 |
+| basepostgresql       | Installs the [PostgreSQL](http://www.postgresql.org/) relational database server               |
+| baseredis            | Installs the [Redis](http://redis.io/) in-memory data structure store                          |
+| baseruby             | Installs the [Ruby](https://www.ruby-lang.org/en/) programming language                        |
+| baseservicemix       | Installs the [Apache ServiceMix](http://servicemix.apache.org/) integration container          |
+| basetomcat           | Installs the [Apache Tomcat](http://tomcat.apache.org/) web server                             |
