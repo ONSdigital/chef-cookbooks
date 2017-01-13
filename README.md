@@ -18,6 +18,7 @@ This repository contains the cookbooks detailed below:
 | basejava             | Installs the [OpenJDK](http://openjdk.java.net/) Java Development Kit                          |
 | basemongodb          | Installs the [MongoDB](http://www.mongodb.org/) document database server                       |
 | basenginx            | Installs the [NGINX](http://nginx.org/) web server                                             |
+| baseopenldap         | Installs the [OpenLDAP](http://www.openldap.org/) server                                       |
 | basepassenger        | Installs the [Phusion Passenger](https://www.phusionpassenger.com/) web server                 |
 | basepostgresql       | Installs the [PostgreSQL](http://www.postgresql.org/) relational database server               |
 | baseredis            | Installs the [Redis](http://redis.io/) in-memory data structure store                          |
